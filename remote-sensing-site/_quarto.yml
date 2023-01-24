@@ -23,4 +23,5 @@ format:
     documentclass: scrreprt
 
 editor: visual
+output_dir: docs
 
