@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: " CASA0023: Remote Sensing Environment "
+  author: "Guk Yu"
+  date: "24/01/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - week1.qmd
+    - week2.qmd
+    - week3.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

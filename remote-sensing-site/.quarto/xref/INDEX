@@ -1,0 +1,23 @@
+{
+  "index.qmd": {
+    "index.html": "41e1117e"
+  },
+  "intro.qmd": {
+    "intro.html": "3322a793"
+  },
+  "summary.qmd": {
+    "summary.html": "e08264a4"
+  },
+  "references.qmd": {
+    "references.html": "438af656"
+  },
+  "week1.qmd": {
+    "week1.html": "6a29feb3"
+  },
+  "week2.qmd": {
+    "week2.html": "30a44fa9"
+  },
+  "week3.qmd": {
+    "week3.html": "2ced6f5a"
+  }
+}
