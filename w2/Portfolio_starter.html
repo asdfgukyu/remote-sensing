@@ -4,7 +4,7 @@
     <title>W2: Intoducing Satellite</title>
     <meta charset="utf-8" />
     <meta name="author" content="Guk Yu" />
-    <script src="Portfolio_starter_files/header-attrs/header-attrs.js"></script>
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
@@ -35,18 +35,15 @@ background-position: center
 
 ---
 
-
-## Overview: Landsat 8
-
+### Overview: Landsat 8
 #### Launched in 2013, Landsat 8 marked the beginning of modern satellite imagery.
+Utilised new push-broom sensor that created instantaneous scan lines with a line of 7,000 detectors, instead of just a few detectors reflected with mirrors with the whisk broom sensor. This caused problems resulting in a zig-zaged image in Landsat 7.
 
-Utilised new push-broom sensor (OLI) that created instantaneous scan lines with a line of detectors (7,000!), instead of just a few detectors reflected with mirrors with the whisk broom sensor. This caused problems resulting in a zig-zaged image in Lansat 7.
-
-Combined with 2021's Landsat 9 in the same orbit, Earth data is available every **8 days**!
+One of the most important contributions of Landsat 8 is the **continuous and consistent data record** it provides, allowing scientists to monitor changes in land use and land cover over time.
 
 **Spatial Resolution** : moderate to high resolution (15m - 100m)
 
-**Temporal Frequency** : ~725 scenes day, huge increase from Landsat 7 (350) (note: Landsat 9: 1,400/per day)
+**Temporal Frequency** : ~725 scenes day, huge increase from Landsat 7 (350)
 
 **Spectral Resolution** : 5 visible and near infrared (NVIR) bands, 3 short waved infrared (SWIR) bands, 1 panchromatic image (PAN), 2 thermal infrared (TIR) bands.
 
@@ -57,21 +54,22 @@ Combined with 2021's Landsat 9 in the same orbit, Earth data is available every 
 &lt;img src="img/push_broom.jpeg" width="35%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 ---
-## Scientific Instruments
+### Scientific Instruments
 .pull-left[
-### **Operational Land Imager OLI**
+#### **Operational Land Imager OLI**
 
-- Responsible for the new push broom tech.
-- Measures in visible, near infrared, and short wave infrared of the spectrum —
-- Spatial resolution includes 15m panchromatic and 30m multi-spectral with a 185km wide swaths
+- Responsible for the new push broom tech, designed to provide data that is consistently accurate and highly calibrated.
+- Measures in visible, near infrared, and short wave infrared
+- Higher signal-to-noise ratio compared to previous Landsat instruments, meaning higher-quality data
+
 ]
 
 .pull-right[
 
-### **Thermal InfraRed Sensor TIRS**
+#### **Thermal InfraRed Sensor TIRS**
 
-- Measures invisible thermal infrared by detecting 2 thermal infrared wavelength bands (1 for Earth's surface, 1 for atmosphere at 100m. This was no available in Landsat 7.
-- Proven useful for tracking land and water consumption from previous missions.
+- Measures invisible thermal infrared by detecting 2 thermal infrared wavelength bands (1 for Earth's surface, 1 for atmosphere at 100m. This was not available in Landsat 7.
+- Used to study urbanization and deforestation, as well as to monitor the extent and health of vegetation, and to detect and monitor fires.
 ]
 
 &lt;img src="img/BandpassesL7vL8_Jul20131-1024x611-1.jpeg" width="40%" style="display: block; margin: auto;" /&gt;
@@ -88,17 +86,20 @@ background-position: center
 
 class: inverse
 ## Application
+
 ### Land Surface Temperature
 
 .pull-left[
-### Urban Heat Island:
+#### **Urban Heat Island**:
 - Kaplan et al 2018 used Landsat 8 to collect LST data across varying land covers and vegetation abundance in Macedonia. 
+
 - Normalised Difference Vegetation Index (NDVI) was used for vegetation extraction and Normalised Difference Built-up Index (NDBI) was used for urban extractions.
 ]   
 
 .pull-right[
-### Evapotranspiration:
-- Using TIR data to measure the evaporation from soil surface evaporation of water intercepted by the canopy, and transpiration from vegetation
+#### **Evapotranspiration**:
+- Using TIR data to measure the evaporation from soil surface evaporation of water intercepted by the canopy, and transpiration from vegetation.
+
 - Senay et al (2015) Used 528 Landsat 8 images to estimate evapotranspiration of the Colorado River Basin, assessing impact of surrounding 5 irrigation districts.
 ]
 
@@ -108,15 +109,13 @@ class: inverse
 ## Application
 
 ### Water monitoring
-#### Satellite-derived Bathymetry:
-- Using OLI Band 1 which is particularly good for imaging shallow water to measure water depths.
+- Using OLI Band 1 which is particularly good for imaging shallow water to measure water depths and surface composition.
 - Pacheco et al 2014 developed a linear algorithm to retrieve bathymetry from multispectral Landsat 8 imagery, using LiDAR data for tuning.
-Wastewater
 - In a similar vein, Trinh et al 2017 used Landsat 8 OLI and Aqua MODIS to extract areas of chlorophyll-a concentration as a result of improper wastewater management in Santa Monica, California.
 
-### Foliage observation SWIR
-Since vegetation tracking often replies on SWIR, this field has ben  robust since Landsat 7. However Landsat 8’s higher spatial temporal and narrower spectral resolution allows for more detailed obeservations
-- Karlson et al 2015 Used Lansat 8 and random forest machine learning technique to mapp tree canopy cover and aboveground biomass in Sudano-Sahelian Woodlands.
+### Foliage observation
+Since vegetation tracking often replies on SWIR, this field has been robust since Landsat 7. However Landsat 8’s higher spatial temporal and narrower spectral resolution allows for more detailed observations
+- Karlson et al 2015 Used Lansat 8 and random forest machine learning technique to map tree canopy cover and aboveground biomass in Sudano-Sahelian Woodlands.
     
 ---
 class:, center, title-slide, middle
@@ -125,11 +124,26 @@ background-image: url("img/nasa-6-jTZysYY_U-unsplash.jpg")
 background-size: cover
 background-position: center
 # Reflection
----
-## reflection (Reflection)
 
 ---
-## reflection 2 (Relfection)
+## Reflection
+
+- Landsat 8 marked the **beginning of modern satellite imagery**. It almost doubled Landsat 7’s temporal resolution, added 3 additional bands, increased ability to detect noise and removed line scan errors entirely.
+
+- It’s interesting to understand how a satellite series evolve and important to recognised the **research fields that are made possible** because of advancements of these instruments.
+
+- Landsat 8 in particular enabled Earth Data to be used widely because of it's **consistent and accurate data** for just under a decade.
+
+- In the age of Anthropocene, Landsat 8 enabled us to prove and measure how human activities are impacting the natural world, be it deforestation, water depletion, track temperature change, analysing the water cycle and evaluating vegetation health. this allows for more **ecological centered urban strategy** across the world.
+
+- Intrigued about what’s to come: Landsat Next is said to have **26 bands** and collects **20 times more** imagery than Landsat 8 &amp; 9.
+
+- Satellites can measure **a lot** of things. Colours, water content, depths, chemical concentration. As long as we know **how the electromagnetic spectrum interacts** with the thing we want to measure, we can use remote sensing tools to configure it.
+
+---
+
+## References
+
 
 
 
@@ -139,7 +153,7 @@ background-position: center
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"ratio": "16:9",
+"ratio": "16:10",
 "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
