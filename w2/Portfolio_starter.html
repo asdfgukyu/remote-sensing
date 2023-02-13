@@ -4,59 +4,51 @@
     <title>W2: Intoducing Satellite</title>
     <meta charset="utf-8" />
     <meta name="author" content="Guk Yu" />
-    <meta name="date" content="2023-01-25" />
     <script src="Portfolio_starter_files/header-attrs/header-attrs.js"></script>
-    <script src="Portfolio_starter_files/htmlwidgets/htmlwidgets.js"></script>
-    <link href="Portfolio_starter_files/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="Portfolio_starter_files/datatables-binding/datatables.js"></script>
-    <script src="Portfolio_starter_files/jquery/jquery-3.6.0.min.js"></script>
-    <link href="Portfolio_starter_files/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="Portfolio_starter_files/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="Portfolio_starter_files/dt-core/js/jquery.dataTables.min.js"></script>
-    <link href="Portfolio_starter_files/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
-    <script src="Portfolio_starter_files/crosstalk/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
 
-.title[
-# W2: Intoducing Satellite
-]
-.subtitle[
-## Lansat 8/9
-]
-.author[
-### Guk Yu
-]
-.date[
-### 2023-01-25
-]
+
+
+
+
+class: center, title-slide, middle
+
+background-image: url("img/nasa.jpg")
+background-size: cover
+background-position: center
+
+
+# Week 2 Learning Diary
+## Introducing Landsat 8
+### Summary, Application, Reflection
+
+### 13/02/2023
+
+
+
+&lt;a href="https://github.com/asdfgukyu/rm-site" class="github-corner" aria-label="View source on GitHub"&gt;&lt;svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"&gt;&lt;path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"&gt;&lt;/path&gt;&lt;path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"&gt;&lt;/path&gt;&lt;path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;style&gt;.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}&lt;/style&gt;
+
 
 ---
 
 
+## Overview: Landsat 8
 
-
-class: center
-
-## Instruction
-
-#### *   **summary** criterion will refer to the summary of the sensor you have selected.
-#### *   **application** criterion will refer to examples of studies that have used the data from the sensor and their purpose
-#### *   **reflection** criterion will refer to what you have learnt in relation to the sensor, its use and how the data might be used in future work.
----
-## Overview: Landsat 8/9
 #### Launched in 2013, Landsat 8 marked the beginning of modern satellite imagery.
-#### Utilized new push-broom sensor (OLI) that created instantaneous scan lines with a line of detectors (7,000!), instead of just a few detectors reflected with mirrors with the whisk broom sensor. This caused problems resulting in a zig-zaged image in Lansat 7.
-#### Combined with 2021's Landsat 9 in the same orbit, Earth data is available every **8 days**!
+
+Utilised new push-broom sensor (OLI) that created instantaneous scan lines with a line of detectors (7,000!), instead of just a few detectors reflected with mirrors with the whisk broom sensor. This caused problems resulting in a zig-zaged image in Lansat 7.
+
+Combined with 2021's Landsat 9 in the same orbit, Earth data is available every **8 days**!
 
 **Spatial Resolution** : moderate to high resolution (15m - 100m)
 
-**Temporal Frequency** : ~725 scenes day, huge increase from Landsat 7!! Landsat 9: 1,400/per day.
+**Temporal Frequency** : ~725 scenes day, huge increase from Landsat 7 (350) (note: Landsat 9: 1,400/per day)
 
-**Spectral Resolution** : visible, near infrared, short waved infrared, thermal infrared.
+**Spectral Resolution** : 5 visible and near infrared (NVIR) bands, 3 short waved infrared (SWIR) bands, 1 panchromatic image (PAN), 2 thermal infrared (TIR) bands.
 
 .pull-left[
 &lt;img src="img/whisk_broom.jpeg" width="40%" style="display: block; margin: auto 0 auto auto;" /&gt;
@@ -68,472 +60,87 @@ class: center
 ## Scientific Instruments
 .pull-left[
 ### **Operational Land Imager OLI**
-* Responsible for the new push broom tech!
-* Measures in visible, near infrared, and short wave infrafred of the spectrum.
-* Spatial resolution includes 15m panchromatic and 30m multi-spectral with a 185km wide swath.
-* OLI collects 
+
+- Responsible for the new push broom tech.
+- Measures in visible, near infrared, and short wave infrared of the spectrum —
+- Spatial resolution includes 15m panchromatic and 30m multi-spectral with a 185km wide swaths
 ]
+
 .pull-right[
+
 ### **Thermal InfraRed Sensor TIRS**
-* Measures invisiblethermal infrared by detecting 2 thermal infrared wavelength bands (1 for Earth's surface, 1 for the atmosphere) 
-* Proven useful for tracking land and water consumption from previous missions. 
+
+- Measures invisible thermal infrared by detecting 2 thermal infrared wavelength bands (1 for Earth's surface, 1 for atmosphere at 100m. This was no available in Landsat 7.
+- Proven useful for tracking land and water consumption from previous missions.
 ]
-&lt;img src="img/lansat_range.jpeg" width="55%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="img/BandpassesL7vL8_Jul20131-1024x611-1.jpeg" width="40%" style="display: block; margin: auto;" /&gt;
+---
+class:, center, title-slide, middle
+
+background-image: url("img/imaginearth-la-terre-en-images-opZ--yE1-hg-unsplash.jpg")
+background-size: cover
+background-position: center
+
+# Application
+
+---
+
+class: inverse
+## Application
+### Land Surface Temperature
+
+.pull-left[
+### Urban Heat Island:
+- Kaplan et al 2018 used Landsat 8 to collect LST data across varying land covers and vegetation abundance in Macedonia. 
+- Normalised Difference Vegetation Index (NDVI) was used for vegetation extraction and Normalised Difference Built-up Index (NDBI) was used for urban extractions.
+]   
+
+.pull-right[
+### Evapotranspiration:
+- Using TIR data to measure the evaporation from soil surface evaporation of water intercepted by the canopy, and transpiration from vegetation
+- Senay et al (2015) Used 528 Landsat 8 images to estimate evapotranspiration of the Colorado River Basin, assessing impact of surrounding 5 irrigation districts.
+]
+
 ---
 class: inverse
-## Another thing (Summary)
 
-&lt;img src="img/BandpassesL7vL8_Jul20131-1024x611-1.jpeg" width="60%" style="display: block; margin: auto;" /&gt;
+## Application
+
+### Water monitoring
+#### Satellite-derived Bathymetry:
+- Using OLI Band 1 which is particularly good for imaging shallow water to measure water depths.
+- Pacheco et al 2014 developed a linear algorithm to retrieve bathymetry from multispectral Landsat 8 imagery, using LiDAR data for tuning.
+Wastewater
+- In a similar vein, Trinh et al 2017 used Landsat 8 OLI and Aqua MODIS to extract areas of chlorophyll-a concentration as a result of improper wastewater management in Santa Monica, California.
+
+### Foliage observation SWIR
+Since vegetation tracking often replies on SWIR, this field has ben  robust since Landsat 7. However Landsat 8’s higher spatial temporal and narrower spectral resolution allows for more detailed obeservations
+- Karlson et al 2015 Used Lansat 8 and random forest machine learning technique to mapp tree canopy cover and aboveground biomass in Sudano-Sahelian Woodlands.
+    
 ---
-## c/s 1 (Application)
+class:, center, title-slide, middle
 
-Examples of studies that have used this data from this sensor and their purpose
-
+background-image: url("img/nasa-6-jTZysYY_U-unsplash.jpg")
+background-size: cover
+background-position: center
+# Reflection
 ---
-## c/s 2 (Application)
-
----
-
 ## reflection (Reflection)
 
 ---
-
 ## reflection 2 (Relfection)
-dfv
 
 --- 
-
-
-
-.left-column[
-Text color
-
-[Link Color](#3)
-
-**Bold Color**
-
-_Italic Color_
-
-`Inline Code`
-]
-
-.right-column[
-Lorem ipsum dolor sit amet, [consectetur adipiscing elit (link)](#3), 
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Erat nam at lectus urna.
-Pellentesque elit ullamcorper **dignissim cras tincidunt (bold)** lobortis feugiat. 
-_Eros donec ac odio tempor_ orci dapibus ultrices. 
-Id porta nibh venenatis cras sed felis eget velit aliquet.
-Aliquam id diam maecenas ultricies mi.
-Enim sit amet 
-`code_color("inline")`
-venenatis urna cursus eget nunc scelerisque viverra.
-]
-
-
-Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
-
-[Link to another slide](#colors).
-
-
-# Big Topic or Inverse Slides `#`
-
-## Slide Headings `##`
-
-### Sub-slide Headings `###`
-
-#### Bold Call-Out `####`
-
-This is a normal paragraph text. Only use header levels 1-4.
-
-##### Possible, but not recommended `#####`
-
-###### Definitely don't use h6 `######`
-
----
-
-# Left-Column Headings
-
-.left-column[
-## First
-
-## Second
-
-## Third
-]
-
-.right-column[
-Dolor quis aptent mus a dictum ultricies egestas.
-
-Amet egestas neque tempor fermentum proin massa!
-
-Dolor elementum fermentum pharetra lectus arcu pulvinar.
-]
-
----
-class: inverse center middle
-
-# Topic Changing Interstitial
-
---
-
-```
-class: inverse center middle
-```
-
----
-layout: true
-
-## Blocks
-
----
-
-### Blockquote
-
-&gt; This is a blockquote following a header.
-&gt;
-&gt; When something is important enough, you do it even if the odds are not in your favor.
-
----
-
-### Code Blocks
-
-#### R Code
-
-
-```r
-ggplot(gapminder) +
-  aes(x = gdpPercap, y = lifeExp, size = pop, color = country) +
-  geom_point() +
-  facet_wrap(~year)
-```
-
-#### JavaScript
-
-```js
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
----
-
-### More R Code
-
-
-```r
-dplyr::starwars %&gt;% dplyr::slice_sample(n = 4)
-```
-
----
-
-
-```r
-cli::cli_alert_success("It worked!")
-```
-
-```
-## ✔ It worked!
-```
-
---
-
-
-```r
-message("Just a friendly message")
-```
-
-```
-## Just a friendly message
-```
-
---
-
-
-```r
-warning("This could be bad...")
-```
-
-```
-## Warning: This could be bad...
-```
-
---
-
-
-```r
-stop("I hope you're sitting down for this")
-```
-
-```
-## Error in eval(expr, envir, enclos): I hope you're sitting down for this
-```
-
-
----
-layout: true
-
-## Tables
-
----
-exclude: false
-
-
-```r
-tibble::as_tibble(mtcars)
-```
-
-```
-## # A tibble: 32 × 11
-##      mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  21       6  160    110  3.9   2.62  16.5     0     1     4     4
-##  2  21       6  160    110  3.9   2.88  17.0     0     1     4     4
-##  3  22.8     4  108     93  3.85  2.32  18.6     1     1     4     1
-##  4  21.4     6  258    110  3.08  3.22  19.4     1     0     3     1
-##  5  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2
-##  6  18.1     6  225    105  2.76  3.46  20.2     1     0     3     1
-##  7  14.3     8  360    245  3.21  3.57  15.8     0     0     3     4
-##  8  24.4     4  147.    62  3.69  3.19  20       1     0     4     2
-##  9  22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2
-## 10  19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4
-## # … with 22 more rows
-```
-
----
-
-
-```r
-knitr::kable(head(mtcars), format = 'html')
-```
-
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; mpg &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; cyl &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; disp &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; hp &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; drat &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; wt &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; qsec &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; vs &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; am &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; gear &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; carb &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mazda RX4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.620 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 16.46 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mazda RX4 Wag &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.90 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.875 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Datsun 710 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 22.8 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 108 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 93 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.85 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.320 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.61 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Hornet 4 Drive &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 258 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.08 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.215 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 19.44 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Hornet Sportabout &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.7 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 360 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 175 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.15 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.440 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 17.02 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Valiant &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 18.1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 225 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 105 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.76 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.460 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 20.22 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-exclude: false
-
-
-```r
-DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
-```
-
-<div id="htmlwidget-30008dbaeb37b81b1326" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-30008dbaeb37b81b1326">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
-
----
-layout: true
-
-## Lists
-
----
-
-.pull-left[
-#### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-]
-
-.pull-right[
-
-#### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-]
-
----
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
----
-
-### Nesting an ol in ul in an ol
-
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-
----
-layout: true
-
-## Plots
-
----
-
-
-```r
-library(ggplot2)
-(g &lt;- ggplot(mpg) + aes(hwy, cty, color = class) + geom_point())
-```
-
-&lt;img src="Portfolio_starter_files/figure-html/plot-example-1.png" width="100%" /&gt;
-
----
-
-
-```r
-g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
-  ggtitle("A Plot About Cars")
-```
-
-.footnote[Requires `{showtext}`]
-
-
----
-class: center, middle
-
-# Thanks!
-
-Slides created via the R packages:
-
-[**xaringan**](https://github.com/yihui/xaringan)&lt;br&gt;
-[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+## References
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"slideNumberFormat": "%current%",
-"highlightStyle": "rainbow",
+"highlightStyle": "github",
 "highlightLines": true,
 "ratio": "16:9",
-"countIncrementalSlides": true
+"countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
